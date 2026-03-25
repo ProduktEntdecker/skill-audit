@@ -4,6 +4,8 @@ A security scanner for OpenClaw skills. Scans skill folders and `.skill` files f
 
 Built at the [OpenClaw Hackathon Munich](https://baiosphere.org/events/2026/openclaw-hackathon-muenchen-24-03) @ jambit.
 
+**[Live Demo](https://produktentdecker.github.io/skill-audit/)** | **[ClawHub](https://clawhub.ai/skills/openclaw-skill-audit)**
+
 ## Install from ClawHub
 
 ```
