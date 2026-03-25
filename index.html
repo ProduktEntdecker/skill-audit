@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -261,14 +261,14 @@
 <div class="hero">
   <div class="hero-shield">🛡</div>
   <h1>skill-<span>audit</span></h1>
-  <p class="tagline">Der Security Scanner fuer OpenClaw Skills.<br>Scannt bevor du vertraust.</p>
+  <p class="tagline">Security scanner for OpenClaw skills.<br>Scan before you trust.</p>
   <div class="badges">
     <span class="badge green">✓ Zero Dependencies</span>
     <span class="badge blue">✓ 712 Lines Python</span>
     <span class="badge purple">✓ Pre-Install Hook</span>
   </div>
-  <div class="install-cmd" onclick="navigator.clipboard.writeText('clawhub install skill-audit'); this.querySelector('.copy').textContent='✓ Copied!'">
-    <span><span class="prompt">$</span> clawhub install skill-audit</span>
+  <div class="install-cmd" onclick="navigator.clipboard.writeText('clawhub install openclaw-skill-audit'); this.querySelector('.copy').textContent='✓ Copied!'">
+    <span><span class="prompt">$</span> clawhub install openclaw-skill-audit</span>
     <span class="copy">Click to copy</span>
   </div>
 </div>
@@ -278,76 +278,76 @@
   <div class="feature">
     <div class="icon">🔍</div>
     <h3>Prompt Injection Detection</h3>
-    <p>Findet versteckte Instruktionen, HTML-Kommentare, Unicode-Tricks und Identity Overrides in SKILL.md</p>
+    <p>Finds hidden instructions, HTML comments, unicode tricks, and identity overrides in SKILL.md</p>
   </div>
   <div class="feature">
     <div class="icon">📡</div>
-    <h3>Data Exfiltration Analyse</h3>
-    <p>Erkennt base64+POST Patterns, Reverse Shells, Verbindungen zu Webhook.site, RequestBin & Co.</p>
+    <h3>Data Exfiltration Analysis</h3>
+    <p>Detects base64+POST patterns, reverse shells, connections to webhook.site, RequestBin, and more</p>
   </div>
   <div class="feature">
     <div class="icon">⚠️</div>
     <h3>Dangerous Code Patterns</h3>
-    <p>eval(), exec(), subprocess, pickle.loads, dynamische Imports — alles was Code-Execution ermoeglicht</p>
+    <p>eval(), exec(), subprocess, pickle.loads, dynamic imports: everything that enables code execution</p>
   </div>
   <div class="feature">
     <div class="icon">📂</div>
     <h3>File System Abuse</h3>
-    <p>Path Traversal, SSH Key Zugriff, /etc/passwd, OpenClaw Config mit deinen Secrets</p>
+    <p>Path traversal, SSH key access, /etc/passwd reads, OpenClaw config with your secrets</p>
   </div>
   <div class="feature">
     <div class="icon">🌐</div>
     <h3>Network Mapping</h3>
-    <p>Extrahiert alle URLs, klassifiziert APIs (OpenAI, Slack, GitHub...), findet hardcoded IPs</p>
+    <p>Extracts all URLs, classifies APIs (OpenAI, Slack, GitHub...), finds hardcoded IPs</p>
   </div>
   <div class="feature">
     <div class="icon">🔒</div>
     <h3>Pre-Install Hook</h3>
-    <p>Scannt automatisch nach jedem clawhub install. Der User erfaehrt sofort ob ein Skill sicher ist.</p>
+    <p>Scans automatically after every clawhub install. You know instantly if a skill is safe.</p>
   </div>
 </div>
 
 <!-- How It Works -->
 <div class="section">
-  <h2>Wie es <span>funktioniert</span></h2>
+  <h2>How it <span>works</span></h2>
   <div class="workflow">
     <div class="workflow-step">
       <div class="num">1</div>
-      <h4>User fragt</h4>
-      <p>"Installier mir den crypto-tools Skill"</p>
+      <h4>User asks</h4>
+      <p>"Install the crypto-tools skill"</p>
     </div>
     <div class="workflow-arrow">→</div>
     <div class="workflow-step">
       <div class="num">2</div>
-      <h4>Agent installiert</h4>
+      <h4>Agent installs</h4>
       <p>clawhub install crypto-tools</p>
     </div>
     <div class="workflow-arrow">→</div>
     <div class="workflow-step">
       <div class="num">3</div>
       <h4>Auto-Scan</h4>
-      <p>skill-audit prueft sofort alle Dateien</p>
+      <p>skill-audit checks all files immediately</p>
     </div>
     <div class="workflow-arrow">→</div>
     <div class="workflow-step">
       <div class="num">4</div>
       <h4>Report</h4>
-      <p>🟢 Sicher / ⛔ Gefaehrlich — User entscheidet</p>
+      <p>🟢 Safe / ⛔ Dangerous — user decides</p>
     </div>
   </div>
 </div>
 
 <!-- Live Demo -->
 <div class="demo" id="demo">
-  <h2>Live Scan <span>Ergebnisse</span></h2>
-  <p class="subtitle">Echte Skills von ClawHub + ein boeswilliger Test-Skill</p>
+  <h2>Live Scan <span>Results</span></h2>
+  <p class="subtitle">Real skills from ClawHub + a malicious test skill</p>
   <div class="demo-tabs" id="demoTabs"></div>
   <div class="demo-panel" id="demoPanel"></div>
 </div>
 
 <!-- Chat Demo -->
 <div class="chat-demo">
-  <h2>So sieht es im <span style="color:var(--accent)">Chat</span> aus</h2>
+  <h2>How it looks in the <span style="color:var(--accent)">Chat</span></h2>
   <div class="chat-window">
     <div class="chat-header">
       <div class="avatar">🛡</div>
@@ -357,24 +357,34 @@
       </div>
     </div>
     <div class="chat-messages">
-      <div class="msg user">Installier mir den "helpful-utils" Skill</div>
-      <div class="msg agent">Moment, ich installiere und scanne den Skill...</div>
+      <div class="msg user">Install the "helpful-utils" skill</div>
+      <div class="msg agent">One moment, installing and scanning the skill...</div>
       <div class="msg agent">⏳ clawhub install helpful-utils ✓<br>⏳ skill-audit scanning...</div>
-      <div class="msg alert">🚨 <b>WARNUNG: Skill "helpful-utils" ist GEFAEHRLICH!</b><br><br>⛔ Prompt Injection in verstecktem HTML-Kommentar<br>⛔ Reverse Shell (bash an externe IP)<br>⛔ SSH Key Diebstahl<br>⛔ Daten-Exfiltration zu webhook.site<br><br>25 Findings insgesamt. Soll ich den Skill sofort loeschen?</div>
-      <div class="msg user">Ja, loesch den sofort!</div>
-      <div class="msg safe">✅ Skill geloescht. Dein System ist sicher. 🛡</div>
+      <div class="msg alert">🚨 <b>WARNING: Skill "helpful-utils" is DANGEROUS!</b><br><br>⛔ Prompt injection in hidden HTML comment<br>⛔ Reverse shell (bash to external IP)<br>⛔ SSH key theft<br>⛔ Data exfiltration to webhook.site<br><br>25 findings total. Should I delete this skill immediately?</div>
+      <div class="msg user">Yes, delete it now!</div>
+      <div class="msg safe">✅ Skill deleted. Your system is safe. 🛡</div>
     </div>
   </div>
 </div>
 
 <!-- Footer -->
 <div class="footer">
-  <div class="team">Gebaut von Flo & Neo 🟢</div>
-  <div>OpenClaw Hackathon — Muenchen 2026 @ Jump IT</div>
-  <div style="margin-top: 8px">
-    <a href="https://clawhub.com">ClawHub</a> · 
-    <a href="https://docs.openclaw.ai">OpenClaw Docs</a> · 
-    <a href="https://github.com/openclaw/openclaw">GitHub</a>
+  <div class="team">Built by Flo & Neo 🟢</div>
+  <div><a href="https://luma.com/o5n9ldxf?tk=CDgIHj">OpenClaw Hackathon Munich 2026</a> @ <a href="https://www.jambit.com">jambit GmbH</a></div>
+  <div style="margin-top: 6px; font-size: 13px; color: var(--text-dim);">
+    Organised by
+    <a href="https://www.aistrategyinstitute.com/">AI Strategy Institute</a>,
+    <a href="https://linkedin.com/company/kandidstudio">Kandid Studio</a>,
+    <a href="https://www.getventa.ai/">Venta AI</a>
+    — supported by
+    <a href="https://baiosphere.org/">BAIOSPHERE</a>,
+    <a href="https://www.th-deg.de/de/dino">DInO</a>,
+    <a href="https://ki-verband.de/">KI Bundesverband</a>
+  </div>
+  <div style="margin-top: 12px">
+    <a href="https://github.com/ProduktEntdecker/skill-audit">GitHub</a> ·
+    <a href="https://clawhub.ai/skills/openclaw-skill-audit">ClawHub</a> ·
+    <a href="https://docs.openclaw.ai">OpenClaw Docs</a>
   </div>
 </div>
 
