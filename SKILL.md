@@ -75,3 +75,7 @@ Static analysis catches patterns, not intent. Cannot detect:
 - Runtime-only behavior (code fetched from URL then executed)
 
 Combine with manual review for high-stakes deployments.
+
+## Source Code
+
+GitHub: https://github.com/ProduktEntdecker/skill-audit
